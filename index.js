@@ -17,7 +17,7 @@ const SoulAbi = JSON.parse(contractSoulJson);
 const main = async () => {
     
     
-    // const reciept = await mint();
+    //const reciept = await mint();
     //const reciept = await mintSoul();
     const reciept = await bondSoul();
     console.log("Reciept:",reciept);
@@ -132,7 +132,7 @@ const bondSoul = async () => {
     const SoulContract = createSoulBoundContract();
     const encodedTransaction = await SoulContract.methods
         .bond(
-            1, // soul id // auto từ 1
+            2, // soul id // auto từ 1
             "0x783FC27915754512E72b5811599504eCa458E4C5"// parameter từ frontend
         )
         .encodeABI();
